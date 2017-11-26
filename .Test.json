@@ -1,0 +1,26 @@
+{
+    "omitTrigger": false,
+    "abbreviation": {
+        "immediate": false,
+        "wordChars": "[\\w]",
+        "triggerInside": false,
+        "abbreviations": [],
+        "backspace": true,
+        "ignoreCase": false
+    },
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "prompt": true,
+    "description": "Test",
+    "type": "script",
+    "showInTrayMenu": false,
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    },
+    "modes": [],
+    "usageCount": 0,
+    "store": {}
+}

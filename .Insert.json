@@ -1,0 +1,30 @@
+{
+    "hotkey": {
+        "hotKey": null,
+        "modifiers": []
+    },
+    "abbreviation": {
+        "backspace": true,
+        "immediate": false,
+        "wordChars": "[\\w]",
+        "abbreviations": [
+            "date"
+        ],
+        "triggerInside": false,
+        "ignoreCase": false
+    },
+    "description": "Insert",
+    "store": {},
+    "modes": [
+        1
+    ],
+    "omitTrigger": false,
+    "usageCount": 5,
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    },
+    "type": "script",
+    "showInTrayMenu": false,
+    "prompt": false
+}

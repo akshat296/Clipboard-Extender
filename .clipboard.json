@@ -1,0 +1,32 @@
+{
+    "hotkey": {
+        "hotKey": "e",
+        "modifiers": [
+            "<ctrl>"
+        ]
+    },
+    "abbreviation": {
+        "backspace": true,
+        "immediate": false,
+        "wordChars": "[\\w]",
+        "abbreviations": [
+            "testkey"
+        ],
+        "triggerInside": false,
+        "ignoreCase": false
+    },
+    "description": "clipboard",
+    "store": {},
+    "modes": [
+        3
+    ],
+    "omitTrigger": false,
+    "usageCount": 39,
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    },
+    "type": "script",
+    "showInTrayMenu": true,
+    "prompt": true
+}

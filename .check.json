@@ -1,0 +1,30 @@
+{
+    "abbreviation": {
+        "ignoreCase": false,
+        "backspace": true,
+        "abbreviations": [],
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "showInTrayMenu": false,
+    "prompt": false,
+    "hotkey": {
+        "modifiers": [
+            "<ctrl>"
+        ],
+        "hotKey": "2"
+    },
+    "usageCount": 25,
+    "filter": {
+        "isRecursive": false,
+        "regex": null
+    },
+    "store": {},
+    "type": "script",
+    "modes": [
+        3
+    ],
+    "description": "check",
+    "omitTrigger": false
+}

@@ -1,0 +1,23 @@
+{
+    "type": "folder",
+    "usageCount": 0,
+    "abbreviation": {
+        "backspace": true,
+        "triggerInside": false,
+        "immediate": false,
+        "ignoreCase": false,
+        "abbreviations": [],
+        "wordChars": "[\\w]"
+    },
+    "modes": [],
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    },
+    "title": "Sample Scripts",
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "showInTrayMenu": false
+}
