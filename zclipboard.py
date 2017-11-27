@@ -73,5 +73,5 @@ while i<10:
     root.bind("<Control-Key-%i>"%i,lambda event_copy, arg=i: copy(event_copy, arg))
     root.bind("<Alt-Key-%i>"%i,lambda event_paste, arg=i: paste(event_paste, arg))
     i+=1
-globalshortcut("akshat","gedit","<Alt>8")         
+# globalshortcut("akshat","gedit","<Alt>8")         
 root.mainloop()
