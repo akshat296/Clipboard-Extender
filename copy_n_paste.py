@@ -3,27 +3,36 @@ import sys
 import subprocess
 import os
 
-
-myarr = os.environ["clip_var"]
-
 i=0
-s = '@!#!'
+myarr = [0,1,2,3,4,5,6,7,8,9,10,11]
+def fileread(num_key):
+    try:
+        f = open("clipped_at_NumKey_%i.txt"%num_key,'r')
+        contents = f.read()
+        return contents
+    except IOError:
+        return ''
+def filewrite(num_key,txt):
+    f = open("clipped_at_NumKey_%i.txt"%num_key,"w+")
+    f.write(txt)
+    pyautogui.alert('Text copied "%s" at Num-key-%i'%(txt,num_key))
+    f.close()
+    
+
 def copy(num_key):
     print(num_key)
-    os.environ["clip_var"] = "check"
     flag=False
     pyautogui.hotkey('ctrl', 'insert')
     clip = subprocess.check_output('xclip -o', shell=True)
-    pyautogui.alert('myarr %r'%myarr)
     clip = clip.decode("utf-8")
     for i in range(len(myarr)):
-        if myarr[i] == clip:
-            flag=True
-            pyautogui.alert('Same Text at Num key %i'%i)
+        f = fileread(i)
+        if f == clip:
+            flag = True
+            pyautogui.alert('Same Text at Num-key-%i "%s"'%(i,f))
     if flag!=True: 
-        myarr[int(num_key)]=clip
-        pyautogui.alert('Text copied %s at Num key %i %r'%(clip,int(num_key),myarr))
-        print(myarr)
+        filewrite(int(num_key),clip)
+        print(clip)
 
 def setClipboardData(data):
     p = subprocess.Popen(['xclip','-selection','clipboard'], stdin=subprocess.PIPE)
@@ -32,15 +41,16 @@ def setClipboardData(data):
     retcode = p.wait()
 
 def paste(num_key):
-    print(myarr)
-    if(myarr[int(num_key)]!=None):
-        print(myarr[int(num_key)])
-        setClipboardData(arr[int(num_key)].encode())
+    print(num_key)
+    f = fileread(int(num_key))
+    if(f!=''):
+        print(f)
+        setClipboardData(f.encode())
         pyautogui.PAUSE = 1
         pyautogui.hotkey('ctrl', 'v')
-        pyautogui.alert('Text pasted %s %r'%(clip,myarr))
+        pyautogui.alert('Text Pasted as "%s"'%f)
     else:
-        pyautogui.alert("Error None")           
+        pyautogui.alert("Nothing at Num-key-%i Error"%num_key)           
 
 if(sys.argv[1]=="copy"):
     copy(sys.argv[2])

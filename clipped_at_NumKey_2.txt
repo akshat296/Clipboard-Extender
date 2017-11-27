@@ -1,0 +1,1 @@
+python /home/akshat/.config/autokey/data/Sample/copy_n_paste.py copy 2
