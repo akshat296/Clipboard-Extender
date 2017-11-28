@@ -2,6 +2,7 @@ import pyautogui
 import sys
 import subprocess
 import os
+import pywinauto
 
 i=0
 myarr = [0,1,2,3,4,5,6,7,8,9,10,11]
@@ -44,13 +45,19 @@ def paste(num_key):
     print(num_key)
     f = fileread(int(num_key))
     if(f!=''):
-        print(f)
+        #print(f)
         setClipboardData(f.encode())
-        pyautogui.PAUSE = 1
-        pyautogui.hotkey('ctrl', 'v')
-        pyautogui.alert('Text Pasted as "%s"'%f)
+        #window = findwindow(title = "copy_n_paste.py - clip - Visual Studio Code")
+        #SendKeys(shift, "insert")
+        pyautogui.click()
+        pyautogui.typewrite('',interval=0.02)
+        #pyautogui.hotkey('shift','insert')
+        pyautogui.click()
+        pyautogui.typewrite('%s'%f,interval=0.02)
+        #pyautogui.typewrite(f)
+        #pyautogui.alert('Text Pasted as "%s"'%f)
     else:
-        pyautogui.alert("Nothing at Num-key-%i Error"%num_key)           
+        pyautogui.alert("Nothing at Num-key-%i Error"%int(num_key))           
 
 if(sys.argv[1]=="copy"):
     copy(sys.argv[2])

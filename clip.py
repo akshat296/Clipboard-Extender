@@ -35,6 +35,8 @@ def create_shortcut(name, command, binding):
         subprocess.call(["/bin/bash", "-c", cmd])
 
 
+#create_shortcut("Copy Num %i"%i, "python3 /home/thinksysuser/Practise/clip/copy_n_paste.py '%s' '%i'"%('copy',i), "<Ctrl>%i"%i
+#create_shortcut("Paste Num %i"%i, "python3 /home/thinksysuser/Practise/clip/copy_n_paste.py '%s' '%i'"%('paste',i), "<Alt>%i"%i)
 while i<10:
     create_shortcut("Copy Num %i"%i, "python /home/akshat/.config/autokey/data/Sample/copy_n_paste.py '%s' '%i'"%('copy',i), "<Ctrl>%i"%i)
     create_shortcut("Paste Num %i"%i, "python /home/akshat/.config/autokey/data/Sample/copy_n_paste.py '%s' '%i'"%('paste',i), "<Alt>%i"%i)
